@@ -1,12 +1,16 @@
-# Terraform
+# Terraform local state
 .terraform/
 *.tfstate
 *.tfstate.backup
 *.tfvars
 .terraform.lock.hcl
 
-# Docker
-*.log
+# Credenciales y secretos (AWS/Azure/GCP)
+*.pem
+*.key
+secrets.tfvars
 
-# Sistema
-.DS_Store
+# Logs y datos temporales
+*.log
+edge_node/mosquitto/data/*
+!edge_node/mosquitto/data/.gitkeep
